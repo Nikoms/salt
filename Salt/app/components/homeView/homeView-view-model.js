@@ -5,8 +5,6 @@ var ViewModel,
 
 ViewModel = new Observable({
 
-    backButtonHidden: true,
-
     pageTitle: 'Home View',
 
     signinVisibility: 'visible',

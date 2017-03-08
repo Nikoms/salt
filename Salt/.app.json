@@ -104,7 +104,7 @@
       ],
       "title": "My kites",
       "addToNavigation": true,
-      "icon": "organize"
+      "icon": "mostviewed"
     }
   ],
   "dataProviders": [
@@ -119,7 +119,6 @@
   ],
   "name": "nativeScriptApp",
   "navigation": "listmenu",
-  "view": "homeView",
-  "skin": "native",
-  "transition": "none"
+  "transition": "none",
+  "skin": "native"
 }
