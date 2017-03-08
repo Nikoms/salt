@@ -118,7 +118,8 @@
     }
   ],
   "name": "nativeScriptApp",
-  "navigation": "none",
+  "navigation": "listmenu",
   "view": "homeView",
-  "skin": "native"
+  "skin": "native",
+  "transition": "none"
 }
