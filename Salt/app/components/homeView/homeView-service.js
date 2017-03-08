@@ -12,7 +12,8 @@ function Service() {}
 consts = {
     accessTokenKey: 'accessToken',
     accessTokenTypeKey: 'accessTokenType',
-    accessTokenPrincipalIdKey: 'accessTokenPrincipalId'
+    accessTokenPrincipalIdKey: 'accessTokenPrincipalId',
+    rememberKey: 'backendServices_authData_homeViewModel'
 };
 
 function validateArgs(args) {
@@ -25,6 +26,7 @@ function validateArgs(args) {
     }
 }
 
+Service.prototype.rememberKey = consts.rememberKey;
 Service.prototype.signin = function(args, successCallback, errorCallback) {
     validateArgs(args);
 
@@ -36,6 +38,15 @@ Service.prototype.signin = function(args, successCallback, errorCallback) {
                 e.result.token_type);
             localSettings.setString(consts.accessTokenPrincipalIdKey,
                 e.result.principal_id);
+
+            var rememberedData = {
+                email: args.email,
+                password: args.password
+            };
+
+            if (args.rememberme && rememberedData.email && rememberedData.password) {
+                localSettings.setString(consts.rememberKey, JSON.stringify(rememberedData));
+            }
 
             successCallback();
         }, errorCallback);

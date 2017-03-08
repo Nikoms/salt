@@ -77,6 +77,11 @@ function pageLoaded(args) {
         if (service.isAuthenticated()) {
             service.setAuthorization();
             signinSuccess();
+        } else {
+            var rememberedData = localSettings.hasKey(service.rememberKey) && JSON.parse(localSettings.getString(service.rememberKey));
+            if (rememberedData && rememberedData.email && rememberedData.password) {
+                onSignin(rememberedData);
+            }
         }
     }
     // additional pageLoaded

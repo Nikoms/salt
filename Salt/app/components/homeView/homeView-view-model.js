@@ -14,6 +14,7 @@ ViewModel = new Observable({
     displayName: '',
     email: '',
     password: '',
+    rememberme: '',
 
     events: {
         register: 'register',
@@ -26,7 +27,9 @@ ViewModel = new Observable({
         this.notify({
             eventName: this.events.signin,
             email: this.get('email'),
-            password: this.get('password')
+            password: this.get('password'),
+            rememberme: this.get('rememberme')
+
         });
     },
 

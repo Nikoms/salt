@@ -12,7 +12,11 @@
 
             <Label row="1" text="Password" cssClass="form-label" />
             <TextField row="1" col="1" text="{{ password }}" secure="true" cssClass="form-field" />
-            <StackLayout row="1" colSpan="2" rowSpan="2" cssClass="form-item-border" />
+            <StackLayout row="1" colSpan="2" cssClass="form-item-border" />
+
+            <Label row="2" text="Remember Me" cssClass="form-label" />
+            <Switch row="2" col="1" checked="{{ rememberme }}" cssClass="form-field" />
+            <StackLayout row="2" colSpan="2" cssClass="form-item-border" />
 
             <widgets:button row="3" colSpan="2" text="Sign In" tap="{{ onSignin }}" />
             <Label row="4" colSpan="2" text="Register" tap="{{ onShowRegister }}" cssClass="form-link" />
