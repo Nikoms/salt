@@ -15,19 +15,95 @@
           "registerPasswordLabel": "Password",
           "registerNameLabel": "Name",
           "registerLabel": "Register",
-          "registerRedirect": "homeView",
+          "registerRedirect": "loggedHomeView",
           "gotoSigninLabel": "Sign In",
           "enableLogout": false,
           "enableRememberme": false,
           "emailLabel": "Email",
           "passwordLabel": "Password",
           "signinLabel": "Sign In",
-          "signinRedirect": "homeView"
+          "signinRedirect": "loggedHomeView"
         }
       ],
       "title": "Home View",
+      "addToNavigation": false
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "loggedHomeView",
+      "components": [],
+      "title": "Logged Home",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "kiteView",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "name",
+                  "title": "Kite name & size",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "name"
+                }
+              ],
+              "name": "editableListForm13",
+              "formType": "edit"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "name",
+                  "title": "Kite name & size",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "name"
+                }
+              ],
+              "name": "editableListForm19",
+              "formType": "add"
+            }
+          ],
+          "name": "kiteViewModel",
+          "dataProvider": "backendServices",
+          "collection": "user_kites",
+          "headerField": "name",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Add a kite",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "name",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "iconField": false,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "name"
+        }
+      ],
+      "title": "My kites",
+      "addToNavigation": true,
+      "icon": "organize"
     }
   ],
   "dataProviders": [
@@ -41,7 +117,7 @@
     }
   ],
   "name": "nativeScriptApp",
-  "navigation": "listmenu",
-  "transition": "none",
+  "navigation": "none",
+  "view": "homeView",
   "skin": "native"
 }

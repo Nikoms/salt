@@ -34,7 +34,7 @@ function authError(error) {
 }
 
 function signinSuccess() {
-    helpers.navigate('components/homeView/homeView');
+    helpers.navigate('components/loggedHomeView/loggedHomeView');
 }
 
 function onSignin(data) {
@@ -45,7 +45,7 @@ function onSignin(data) {
 }
 
 function registerSuccess() {
-    helpers.navigate('components/homeView/homeView');
+    helpers.navigate('components/loggedHomeView/loggedHomeView');
 }
 
 function onRegister(data) {

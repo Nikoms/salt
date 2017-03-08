@@ -4,8 +4,8 @@ var menuItems,
     navigationViewModel = new observable.Observable();
 
 menuItems = [{
-    "title": "Home View",
-    "moduleName": "components/homeView/homeView",
+    "title": "Logged Home",
+    "moduleName": "components/loggedHomeView/loggedHomeView",
     "icon": "\ue0dd"
 }];
 
