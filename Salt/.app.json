@@ -245,31 +245,6 @@
     },
     {
       "type": "NativeScript:view",
-      "name": "aboutView",
-      "components": [
-        {
-          "type": "NativeScript:about",
-          "name": "aboutViewModel",
-          "appName": "Paprikite",
-          "appVersion": "Version 1",
-          "appDescription": "Une app qu'elle est bien!",
-          "contactButton": true,
-          "contactLabel": "Contact us",
-          "contactMail": "nikoms@gmail.com",
-          "facebookButton": true,
-          "facebookLabel": "Like us on Facebook",
-          "facebookLink": "https://www.facebook.com/Telerik",
-          "twitterButton": true,
-          "twitterLabel": "Follow us on Twitter",
-          "twitterLink": "https://twitter.com/nicodeboose"
-        }
-      ],
-      "title": "About",
-      "addToNavigation": true,
-      "icon": "info"
-    },
-    {
-      "type": "NativeScript:view",
       "name": "countryView",
       "components": [
         {
@@ -328,6 +303,31 @@
       "title": "Countries",
       "addToNavigation": true,
       "icon": "globe"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "NativeScript:about",
+          "name": "aboutViewModel",
+          "appName": "Paprikite",
+          "appVersion": "Version 1",
+          "appDescription": "Une app qu'elle est bien!",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "nikoms@gmail.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/Telerik",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/nicodeboose"
+        }
+      ],
+      "title": "About",
+      "addToNavigation": true,
+      "icon": "info"
     }
   ],
   "dataProviders": [
