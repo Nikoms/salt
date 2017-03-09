@@ -16,13 +16,13 @@ menuItems = [{
     "moduleName": "components/spotView/spotView",
     "icon": "\ue0e9"
 }, {
-    "title": "About",
-    "moduleName": "components/aboutView/aboutView",
-    "icon": "\ue0de"
-}, {
     "title": "Countries",
     "moduleName": "components/countryView/countryView",
     "icon": "\ue0dc"
+}, {
+    "title": "About",
+    "moduleName": "components/aboutView/aboutView",
+    "icon": "\ue0de"
 }];
 
 navigationViewModel.set('menuItems', menuItems);
