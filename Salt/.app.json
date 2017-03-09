@@ -105,6 +105,229 @@
       "title": "My kites",
       "addToNavigation": true,
       "icon": "mostviewed"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "spotView",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "country",
+                  "title": "Country",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "country"
+                }
+              ],
+              "name": "editableListForm28",
+              "formType": "list"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "localisation",
+                  "title": "Localisation",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "top",
+                  "dataBindingOptional": "localisation"
+                }
+              ],
+              "name": "editableListForm29",
+              "formType": "detail"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "spotName",
+                  "title": "Name",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "name"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "description",
+                  "title": "Description",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "description"
+                }
+              ],
+              "name": "editableListForm31",
+              "formType": "edit"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "spotName",
+                  "title": "Name",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "name"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "country",
+                  "title": "Country",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "country"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "description",
+                  "title": "Description",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top",
+                  "dataBinding": "description"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "localisation",
+                  "title": "Localisation",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "localisation"
+                }
+              ],
+              "name": "editableListForm30",
+              "formType": "add"
+            }
+          ],
+          "name": "spotViewModel",
+          "dataProvider": "backendServices",
+          "collection": "spots",
+          "headerField": "name",
+          "subHeaderField": "description",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": true,
+          "editScreenHeaderSource": "static",
+          "editScreenHeaderValue": "Edit",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "iconField": true,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "name",
+          "detailSubHeaderField": "country",
+          "detailDescriptionField": "description"
+        }
+      ],
+      "title": "Spots",
+      "addToNavigation": true,
+      "icon": "search"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "NativeScript:about",
+          "name": "aboutViewModel",
+          "appName": "Paprikite",
+          "appVersion": "Version 1",
+          "appDescription": "Une app qu'elle est bien!",
+          "contactButton": true,
+          "contactLabel": "Contact us",
+          "contactMail": "nikoms@gmail.com",
+          "facebookButton": true,
+          "facebookLabel": "Like us on Facebook",
+          "facebookLink": "https://www.facebook.com/Telerik",
+          "twitterButton": true,
+          "twitterLabel": "Follow us on Twitter",
+          "twitterLink": "https://twitter.com/nicodeboose"
+        }
+      ],
+      "title": "About",
+      "addToNavigation": true,
+      "icon": "info"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "countryView",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "countryName",
+                  "title": "Name",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "name"
+                },
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "code",
+                  "title": "Code",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "code"
+                }
+              ],
+              "name": "editableListForm42",
+              "formType": "add"
+            }
+          ],
+          "name": "countryViewModel",
+          "dataProvider": "backendServices",
+          "collection": "countries",
+          "headerField": "name",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "itemActionView": "spotView",
+          "itemActionPrimaryKey": "Id",
+          "itemActionSecondaryKey": "country",
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail"
+        }
+      ],
+      "title": "Countries",
+      "addToNavigation": true,
+      "icon": "globe"
     }
   ],
   "dataProviders": [
