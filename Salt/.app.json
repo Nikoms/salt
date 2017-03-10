@@ -328,6 +328,77 @@
       "title": "About",
       "addToNavigation": true,
       "icon": "info"
+    },
+    {
+      "type": "NativeScript:view",
+      "name": "userView",
+      "components": [
+        {
+          "type": "NativeScript:editableList",
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "email",
+                  "title": "Email",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "Email"
+                }
+              ],
+              "name": "editableListForm45",
+              "formType": "add"
+            },
+            {
+              "type": "NativeScript:editableListForm",
+              "components": [
+                {
+                  "type": "NativeScript:editableListFormField",
+                  "name": "email",
+                  "title": "Email",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "dataBinding": "DisplayName"
+                }
+              ],
+              "name": "editableListForm46",
+              "formType": "edit"
+            }
+          ],
+          "name": "userViewModel",
+          "dataProvider": "backendServices",
+          "collection": "Users",
+          "headerField": "Email",
+          "subHeaderField": "DisplayName",
+          "isMapView": false,
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": true,
+          "editScreenHeaderSource": "dataBound",
+          "editScreenHeaderField": "Email",
+          "deleteItemButton": true,
+          "deleteItemConfirmation": true,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "iconField": true,
+          "detailHeaderFieldSource": "dataBound",
+          "detailHeaderField": "Email",
+          "detailDescriptionField": "Email"
+        }
+      ],
+      "title": "Users 2",
+      "addToNavigation": true,
+      "icon": "contacts"
     }
   ],
   "dataProviders": [

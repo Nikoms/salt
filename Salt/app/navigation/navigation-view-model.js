@@ -23,6 +23,10 @@ menuItems = [{
     "title": "About",
     "moduleName": "components/aboutView/aboutView",
     "icon": "\ue0de"
+}, {
+    "title": "Users 2",
+    "moduleName": "components/userView/userView",
+    "icon": "\ue0e4"
 }];
 
 navigationViewModel.set('menuItems', menuItems);
